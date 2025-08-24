@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LSTM Stress Detection</title>
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🧠 LSTM Stress Detection</h1>
+            <p>AI-powered stress analysis using heart rate and respiration data</p>
+        </header>
+
+        <main class="main-content">
+            <div class="input-section">
+                <h2>📊 Input Your Data</h2>
+                <div class="input-group">
+                    <div class="input-field">
+                        <label for="heartRate">Heart Rate (BPM)</label>
+                        <input type="number" id="heartRate" min="40" max="200" value="75" placeholder="Enter heart rate">
+                        <span class="input-hint">Normal range: 60-100 BPM</span>
+                    </div>
+                    <div class="input-field">
+                        <label for="respiration">Respiration Rate (breaths/min)</label>
+                        <input type="number" id="respiration" min="8" max="40" value="16" placeholder="Enter respiration rate">
+                        <span class="input-hint">Normal range: 12-20 breaths/min</span>
+                    </div>
+                </div>
+                <button id="predictBtn" class="predict-btn">🔮 Predict Stress Level</button>
+            </div>
+
+            <div class="results-section" id="resultsSection" style="display: none;">
+                <h2>📈 Analysis Results</h2>
+                <div class="result-card">
+                    <div class="stress-indicator">
+                        <div class="stress-level" id="stressLevel">
+                            <span class="stress-text" id="stressText">Analyzing...</span>
+                            <span class="confidence" id="confidence">Confidence: --</span>
+                        </div>
+                        <div class="stress-meter">
+                            <div class="meter-fill" id="meterFill"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="dataChart"></canvas>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+</body>
+</html>
