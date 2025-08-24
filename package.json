@@ -1,0 +1,22 @@
+{
+  "name": "lstm-stress-detection",
+  "version": "1.0.0",
+  "description": "LSTM-based stress detection web application",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.15.0",
+    "chart.js": "^4.4.1"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  },
+  "keywords": ["lstm", "stress-detection", "tensorflow", "machine-learning"],
+  "author": "",
+  "license": "MIT"
+}
